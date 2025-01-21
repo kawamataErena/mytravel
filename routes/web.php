@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 use App\Http\Controllers\Admin\ShioriController;
 Route::controller(ShioriController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
+    Route::get('shiori/create', 'add')->middleware('auth');
     Route::get('shiori/create', 'add')->name('shiori.add');
     Route::post('shiori/create','create')->name('shiori.create');
     Route::get('shiori', 'index')->name('shiori.index');
