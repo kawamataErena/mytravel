@@ -15,6 +15,15 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+                        <メニュー>
+                        <li class="nav-item @if(Request::routeIs('shiori.add')) active @endif"><a href="{{ route('admin.shiori.add')}}">しおりの新規作成</li>
+                        <li class="nav-item @if(Request::routeIs('shiori.index')) active @endif"><a href="{{ route('admin.shiori.index')}}">しおり一覧</li>
+                        <li class="nav-item @if(Request::routeIs('memo.add')) active @endif"><a href="{{ route('admin.memo.add')}}">メモ</li>
+                        
+                        
+
                 </div>
             </div>
         </div>

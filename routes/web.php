@@ -36,5 +36,6 @@ Route::get('/',[PublicHomeController::class,'index'])->name('shiori.index');
 
 use App\Http\Controllers\Admin\MemoController;
 Route::controller(MemoController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
-    Route::get('memo/create','add');
+    Route::get('memo/create','add')->name('memo.add');
+    Route::post('memo/create','create')->name('memo.create');
 });

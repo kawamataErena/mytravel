@@ -16,12 +16,15 @@
                         </ul>
                     @endif
                     <div class="form-group row">    
-                        <label class="col-md-3">タイトル</label>
-                        <div class="col-md-3">
-                        <label class="col-md-8">しおり画像</label>
-                        <div class="col-md-5">
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                        <label class="col-md-2">タイトル</label>
+                        <div class="col-md-10">
+                        <input type="text" class="form-control" name="title" value="{{ old('title') }}">
                         </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2">しおり画像</label>
+                        <div class="col-md-10">
+                        <input type="file" class="form-control-file" name="image">                        </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2">旅先</label>
@@ -41,14 +44,15 @@
                         <div class="col-md-10">
                             <textarea class="form-control" name="memo" rows="15">{{ old('memo') }}</textarea>
                     </div>
-                    <div class="form-group row">
-                        <label class="col-md-2">しおり画像</label>
-                        <div class="col-md-10">
-                            <input type="file" class="form-control-file" name="image">
-                        </div>
-                    </div>
+
+
                     @csrf
-                    <input type="submit" class="btn btn-primary" value="更新">
+
+                    <div class="form-group row mb-0">
+                    <div class="col-md-8 offset-md-4">
+                    <input type="submit" class="btn btn-primary" value="作成">
+
+                    </div>
                 </form>
             </div>
         </div>
