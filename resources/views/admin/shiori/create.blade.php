@@ -24,7 +24,8 @@
                     <div class="form-group row">
                         <label class="col-md-2">しおり画像</label>
                         <div class="col-md-10">
-                        <input type="file" class="form-control-file" name="image">                        </div>
+                        <input type="file" class="form-control-file" name="image">                        
+                        </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2">旅先</label>
@@ -43,6 +44,7 @@
                         <label class="col-md-2">メモ</label>
                         <div class="col-md-10">
                             <textarea class="form-control" name="memo" rows="15">{{ old('memo') }}</textarea>
+                        </div>
                     </div>
 
 
