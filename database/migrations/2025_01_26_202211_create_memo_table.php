@@ -13,9 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('memo', function (Blueprint $table) {
+        Schema::create('memos', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title1')->nullable()->change();
+            $table->string('title2')->nullable()->change();
+            $table->string('title3')->nullable()->change();
+            $table->string('title4')->nullable()->change();
+            $table->string('title5')->nullable()->change();
+            $table->string('title6')->nullable()->change();
+            $table->string('title7')->nullable()->change();
+
             $table->timestamps();
         });
     }
@@ -27,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('memo');
+        Schema::dropIfExists('memos');
     }
 };

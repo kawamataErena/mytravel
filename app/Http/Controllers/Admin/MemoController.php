@@ -16,8 +16,9 @@ class MemoController extends Controller
 
         public function create(Request $request)
         {
+    
 
-            $this->validate($request, Memo::$rules);
+            // $this->validate($request, Memo::$rules);
 
             $memo = new Memo;
             $form = $request->all();
